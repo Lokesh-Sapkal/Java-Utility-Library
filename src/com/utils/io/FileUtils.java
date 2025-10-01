@@ -1,0 +1,26 @@
+package com.utils.io;
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Class Name			:	FileUtils
+//	Description			:	This class provides utilities for file operations.
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+public class FileUtils
+{
+    private String fName;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	FileUtils
+    //	Description             :   This is parameterized constructor of the FileUtils class
+    //                              and is used to initialized characteristics.
+    //	Parameters				:   String(name)
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public FileUtils(String name)
+    {
+        this.fName = name;
+    }
+}

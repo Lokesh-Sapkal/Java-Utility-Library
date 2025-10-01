@@ -1,0 +1,26 @@
+package com.utils.digits;
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Class Name			:	DigitUtils
+//	Description			:	This class provides operations on digits of a number.
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+public class DigitUtils
+{
+    private int iNo;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	DigitUtils
+    //	Description             :   This is parameterized constructor of the DigitUtils class
+    //                              and is used to initialized characteristics.
+    //	Parameters				:   int (no)
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public DigitUtils(int no)
+    {
+        this.iNo = no;
+    }
+}

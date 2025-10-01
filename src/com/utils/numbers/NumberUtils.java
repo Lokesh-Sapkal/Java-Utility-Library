@@ -1,0 +1,26 @@
+package com.utils.numbers;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Class Name			:	NumberUtils
+//	Description			:	This class represents a single number for performing numeric operations.
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////
+public class NumberUtils
+{
+    private int iNo;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	NumberUtils
+    //	Description             :   This is parameterized constructor of the NumberUtils class
+    //                              and is used to initialized characteristics.
+    //	Parameters				:   int(no)
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public NumberUtils(int no)
+    {
+        this.iNo = no;
+    }
+}

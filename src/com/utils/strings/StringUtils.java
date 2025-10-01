@@ -1,0 +1,26 @@
+package com.utils.strings;
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Class Name			:	StringUtils
+//	Description			:	This class provides operations on strings.
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+public class StringUtils
+{
+    private String sValue;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	StringUtils
+    //	Description             :   This is parameterized constructor of the StringUtils class
+    //                              and is used to initialized characteristics.
+    //	Parameters				:   String(str)
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public StringUtils(String str)
+    {
+        this.sValue = str;
+    }
+}

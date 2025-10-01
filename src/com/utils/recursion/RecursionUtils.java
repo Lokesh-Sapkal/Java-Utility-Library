@@ -1,0 +1,26 @@
+package com.utils.recursion;
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Class Name			:	RecursionUtils
+//	Description			:	This class provides recursive solutions for problems.
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+public class RecursionUtils
+{
+    private int iNo;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	RecursionUtils
+    //	Description             :   This is parameterized constructor of the RecursionUtils class
+    //                              and is used to initialized characteristics.
+    //	Parameters				:   int(no)
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public RecursionUtils(int no)
+    {
+        this.iNo = no;
+    }
+}
