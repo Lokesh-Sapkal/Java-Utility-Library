@@ -1,7 +1,12 @@
 # Java-Utility-Library
 A professional Java utility library containing reusable methods for numbers, arrays, digits, patterns, strings, bitwise operations, matrices, recursion and file I/O.
 
-This library is designed for developers and learners to easily integrate common operations in their Java projects.
+---
+
+## Introduction
+This library is designed for developers and learners to easily integrate common operations in their Java projects. 
+
+It provides a wide range of utility methods that can help simplify your code and improve productivity.
 
 ---
 
@@ -12,10 +17,13 @@ Java-Utility-Library/
 ├── src/
 │   └── com/
 │       └── utils/
+│           ├── app/
+│           │   └── Main.java
 │           ├── numbers/
 │           │   └── NumberUtils.java
 │           ├── n_numbers/
 │           │   └── NNumberUtils.java
+│           │   └── NNumberGenericUtils.java
 │           ├── digits/
 │           │   └── DigitUtils.java
 │           ├── patterns/
@@ -26,12 +34,12 @@ Java-Utility-Library/
 │           │   └── BitwiseUtils.java
 │           ├── matrix/
 │           │   └── MatrixUtils.java
+│           │   └── MatrixGenericUtils.java
 │           ├── recursion/
 │           │   └── RecursionUtils.java
 │           └── io/
 │               └── FileUtils.java
 │
-├── Main.java
 ├── README.md
 └── .gitignored
 └── LICENSE
@@ -48,6 +56,7 @@ Java-Utility-Library/
 - *Matrix Operations:* Addition, multiplication, transpose  
 - *Recursion Methods:* Factorial, Fibonacci, sum of digits
 - *File I/O Utilities:* Read/Write text files
+- *Generic Classes:* Support for generic arrays and matrices
 
 ---
 
@@ -57,13 +66,17 @@ Java-Utility-Library/
 ```bash
 git clone <repository-url>
 ```
+2. *Navigate to the project folder:*
+```bash
+cd src
+```
 2. Compile Java files:
 ```bash
-javac -d bin src/com/utils///*.java src/Main.java
+javac com/utils/app/Main.java
 ```
 3. Run the Main class:
 ```bash
-java -cp bin Main
+java com/utils/app/Main
 ```
 ---
 
@@ -80,14 +93,22 @@ public class Main
 {
     public static void main(String[] args) throws Exception
     {
-        NumberUtils number = new NumberUtils(10);
+        NumberUtils nobj = new NumberUtils(10);
         System.out.println(number.isEven()); // true
 
         int[] arr = {3, 5, 2, 8, 1};
-        NNumberUtils nn = new NNumberUtils(arr);
+        NNumberUtils nnobj = new NNumberUtils(arr);
         System.out.println(nn.sumArray()); // 19
 
-        RecursionUtils recursion = new RecursionUtils(5);
+        Float[] fArr = {3.5f, 5.2f, 2.1f, 8.9f, 1.7f};
+        NNumberGenericUtils ngobj = new NNumberGenericUtils(fArr);
+        System.out.println(ng.sumArray()); // 21.4
+        
+        Float[][] fMatrix = {{1.1f, 2.2f}, {3.3f, 4.4f}};
+        MatrixGenericUtils mgobj = new MatrixGenericUtils(fMatrix, 2, 2);
+        System.out.println(mg.sumMatrix()); // 11.0
+
+        RecursionUtils robj = new RecursionUtils(5);
         System.out.println(recursion.factorial()); // 120
     }
 }
