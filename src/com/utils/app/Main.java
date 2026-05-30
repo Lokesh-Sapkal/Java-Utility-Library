@@ -31,21 +31,31 @@ class Main
     ///////////////////////////////////////////////////////////////////////////////////////////
     public static void main(String A[])
     {
-        int iValue1 = 0, iValue2 = 0, i = 0, j = 0;
-        int Arr[];
-        Float Brr[];
-        int Crr[][];
-        Float Drr[][];
-        String str = "";
+        /* For accept input from user */
+        int iValue1 = 0;
+        int iValue2 = 0;
+        // int i = 0;
+        // int j = 0;
+        // int Arr[];
+        // Float Brr[];
+        // int Crr[][];
+        // Float Drr[][];
+        // String str = "";
+
+        /* For Output */
+        boolean bResult = false;
+        long lOutput = 0;
 
         Scanner sobj = new Scanner(System.in);
 
         try
         {
-            System.out.println("Enter first value : ");
+            // System.out.print("Enter first value : ");
+            System.out.print("Enter the number : ");
             iValue1 = sobj.nextInt();
 
-            System.out.println("Enter second value : ");
+            // System.out.print("Enter second value : ");
+            System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
             iValue2 = sobj.nextInt();
         }
         catch(InputMismatchException eobj)
@@ -55,73 +65,106 @@ class Main
             return;
         }
 
-        if((iValue1 < 0) || (iValue2 < 0))
-        {   
-            System.out.println("Invalid input please give correct input.");
-            return;
-        }
-        else
-        {
-            Brr = new Float[iValue1];
-            try
-            {
-                for(i = 0;i < iValue1;i++)
-                {
-                    Brr[i] = sobj.nextFloat();
-                }
-            }
-            catch(InputMismatchException eobj)
-            {
-                System.out.println("Error : "+eobj);
-                System.out.println("Invalid input please give correct input.");
-            }
+        // if((iValue1 < 0) || (iValue2 < 0))
+        // {   
+        //     System.out.println("Invalid input please give correct input.");
+        //     return;
+        // }
+        // else
+        // {
+            // Brr = new Float[iValue1];
+            // try
+            // {
+            //     for(i = 0;i < iValue1;i++)
+            //     {
+            //         Brr[i] = sobj.nextFloat();
+            //     }
+            // }
+            // catch(InputMismatchException eobj)
+            // {
+            //     System.out.println("Error : "+eobj);
+            //     System.out.println("Invalid input please give correct input.");
+            // }
 
-            Drr = new Float[iValue1][iValue2];
-            try
-            {
-                for(i = 0;i < iValue1;i++)
-                {
-                    for(j = 0;j < iValue2;j++)
-                    {
-                        Drr[i][j] = sobj.nextFloat();
-                    }
-                }
-            }
-            catch(InputMismatchException eobj)
-            {
-                System.out.println("Error : "+eobj);
-                System.out.println("Invalid input please give correct input.");
-            }
-
-            NumberUtils nobj = new NumberUtils(iValue1);
-            DigitUtils dobj = new DigitUtils(iValue1);
-            BitwiseUtils bobj1 = new BitwiseUtils(iValue1);
-            RecursionUtils robj = new RecursionUtils(iValue1);
-
-            PatternUtils pobj = new PatternUtils(iValue1, iValue2);
-            BitwiseUtils bobj2 = new BitwiseUtils(iValue1, iValue2);
+            // Drr = new Float[iValue1][iValue2];
+            // try
+            // {
+            //     for(i = 0;i < iValue1;i++)
+            //     {
+            //         for(j = 0;j < iValue2;j++)
+            //         {
+            //             Drr[i][j] = sobj.nextFloat();
+            //         }
+            //     }
+            // }
+            // catch(InputMismatchException eobj)
+            // {
+            //     System.out.println("Error : "+eobj);
+            //     System.out.println("Invalid input please give correct input.");
+            // }
             
-            sobj.nextLine();
-            System.out.println("Enter the string : ");
-            str = sobj.nextLine();
+            // DigitUtils dobj = new DigitUtils(iValue1);
+            // BitwiseUtils bobj1 = new BitwiseUtils(iValue1);
+            // RecursionUtils robj = new RecursionUtils(iValue1);
 
-            StringUtils strobj = new StringUtils(str);
-            FileUtils fobj = new FileUtils(str);
+            // PatternUtils pobj = new PatternUtils(iValue1, iValue2);
+            // BitwiseUtils bobj2 = new BitwiseUtils(iValue1, iValue2);
+            
+            // sobj.nextLine();
+            // System.out.println("Enter the string : ");
+            // str = sobj.nextLine();
 
-            Arr = new int[iValue1];
+            // StringUtils strobj = new StringUtils(str);
+            // FileUtils fobj = new FileUtils(str);
 
-            NNumberUtils nnobj = new NNumberUtils(Arr);
+            // Arr = new int[iValue1];
 
-            NNumberGenericUtils ngobj = new NNumberGenericUtils(Brr);
+            // NNumberUtils nnobj = new NNumberUtils(Arr);
 
-            Crr = new int[iValue1][iValue2];
+            // NNumberGenericUtils ngobj = new NNumberGenericUtils(Brr);
 
-            MatrixUtils mobj = new MatrixUtils(Crr,iValue1,iValue2);
+            // Crr = new int[iValue1][iValue2];
 
-            MatrixGenericUtils mgobj = new MatrixGenericUtils(Drr, iValue1, iValue2);
+            // MatrixUtils mobj = new MatrixUtils(Crr,iValue1,iValue2);
 
-            System.out.println("Everything is OK...!");
-        }
+            // MatrixGenericUtils mgobj = new MatrixGenericUtils(Drr, iValue1, iValue2);
+
+            // System.out.println("Everything is OK till now...!");
+        // }
+
+        NumberUtils nobj = new NumberUtils(iValue1);
+
+        /* For Testing */
+        // bResult = nobj.checkEvenOdd();
+        // if(bResult == true)
+        // {
+        //     System.out.printf("%d is even\n",iValue1);
+        // }
+        // else
+        // {
+        //     System.out.printf("%d is odd\n",iValue1);
+        // }
+
+        // bResult = nobj.isDivisibleBy(iValue2);
+        // if(bResult == true)
+        // {
+        //     System.out.printf("%d is divisible by %d\n",iValue2,iValue1);
+        // }
+        // else
+        // {
+        //     System.out.printf("%d is not divisible by %d\n",iValue2,iValue1);
+        // }
+
+        // lOutput = nobj.findFactorial();
+
+        // if(lOutput == 0)
+        // {
+        //     System.out.println("Invalid input");
+        // }
+        // else
+        // {
+        //     System.out.printf("Factorial of %d is : %d\n", iValue1, lOutput);
+        // }
 
         sobj.close();
     }
