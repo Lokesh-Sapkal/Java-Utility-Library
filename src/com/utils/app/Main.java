@@ -55,8 +55,8 @@ class Main
             iValue1 = sobj.nextInt();
 
             // System.out.print("Enter second value : ");
-            System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
-            iValue2 = sobj.nextInt();
+            // System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
+            // iValue2 = sobj.nextInt();
         }
         catch(InputMismatchException eobj)
         {
@@ -135,6 +135,7 @@ class Main
         NumberUtils nobj = new NumberUtils(iValue1);
 
         /* For Testing */
+
         // bResult = nobj.checkEvenOdd();
         // if(bResult == true)
         // {
@@ -156,7 +157,6 @@ class Main
         // }
 
         // lOutput = nobj.findFactorial();
-
         // if(lOutput == 0)
         // {
         //     System.out.println("Invalid input");
@@ -164,6 +164,30 @@ class Main
         // else
         // {
         //     System.out.printf("Factorial of %d is : %d\n", iValue1, lOutput);
+        // }
+
+        // nobj.displayFactors();
+
+        // nobj.displayNonFactors();
+
+        // bResult = nobj.isPrime();
+        // if(bResult == true)
+        // {
+        //     System.out.printf("%d is prime\n",iValue1);
+        // }
+        // else
+        // {
+        //     System.out.printf("%d is not prime\n",iValue1);
+        // }
+
+        // bResult = nobj.isPerfect();
+        // if(bResult == true)
+        // {
+        //     System.out.printf("%d is perfect\n",iValue1);
+        // }
+        // else
+        // {
+        //     System.out.printf("%d is not perfect\n",iValue1);
         // }
 
         sobj.close();

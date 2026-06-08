@@ -96,5 +96,135 @@ public class NumberUtils
 
         return lFact;
     }
-}
 
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	displayFactors
+    //	Description             :   Display factors of number.
+    //	Parameters				:   NONE
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void displayFactors()
+    {
+        int iNum = this.iNo;
+        int iCnt = 0;
+
+        System.out.printf("Factors of %d : ",iNum);
+
+        if(iNum < 0)
+        {
+            iNum = -iNum;
+        }
+
+        for(iCnt = 1; iCnt <= (iNum/2); iCnt++)
+        {
+            if((iNum % iCnt) == 0)
+            {
+                System.out.printf("%d   ",iCnt);
+            }
+        }
+        System.out.println();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	displayNonFactors
+    //	Description             :   Display non factors of number.
+    //	Parameters				:   NONE
+    //	Returns					:   NONE
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public void displayNonFactors()
+    {
+        int iNum = this.iNo;
+        int iCnt = 0;
+
+        System.out.printf("Non factors of %d : ",iNum);
+
+        if(iNum < 0)
+        {
+            iNum = -iNum;
+        }
+
+        for(iCnt = 1; iCnt < iNum; iCnt++)
+        {
+            if((iNum % iCnt) != 0)
+            {
+                System.out.printf("%d   ",iCnt);
+            }
+        }
+        System.out.println();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	isPrime
+    //	Description             :   Check whether number is prime or not.
+    //	Parameters				:   NONE
+    //	Returns					:   boolean
+    //                              true -> prime
+    //                              false -> not prime
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public boolean isPrime()
+    {
+        int iNum = this.iNo;
+        boolean bAnswer = true;
+        int iCnt = 0;
+
+        if(iNum <= 1)
+        {
+            return false;
+        }
+
+        for(iCnt = 2; iCnt <= (iNum/2); iCnt++)
+        {
+            if((iNum % iCnt) == 0)
+            {
+                bAnswer = false;
+                break;
+            }
+        }
+
+        return bAnswer;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	isPerfect
+    //	Description             :   Check whether number is perfect or not.
+    //	Parameters				:   NONE
+    //	Returns					:   boolean
+    //                              true -> perfect
+    //                              false -> not perfect
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public boolean isPerfect()
+    {
+        int iNum = this.iNo;
+        boolean bAnswer = true;
+        int iCnt = 0;
+        int iSum = 0;
+
+        if(iNum <= 1)
+        {
+            return false;
+        }
+
+        for(iCnt = 1; iCnt <= (iNum/2); iCnt++)
+        {
+            if((iNum % iCnt) == 0)
+            {
+                iSum += iCnt;
+            }
+        }
+
+        if(iNum != iSum)
+        {
+            bAnswer = false;
+        }
+
+        return bAnswer;
+    }
+}
