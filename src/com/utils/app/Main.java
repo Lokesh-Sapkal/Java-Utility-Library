@@ -33,7 +33,7 @@ class Main
     {
         /* For accept input from user */
         int iValue1 = 0;
-        int iValue2 = 0;
+        // int iValue2 = 0;
         // int i = 0;
         // int j = 0;
         // int Arr[];
@@ -43,8 +43,9 @@ class Main
         // String str = "";
 
         /* For Output */
-        boolean bResult = false;
-        long lOutput = 0;
+        // boolean bResult = false;
+        // long lOutput = 0;
+        int iResult = 0;
 
         Scanner sobj = new Scanner(System.in);
 
@@ -103,7 +104,6 @@ class Main
             //     System.out.println("Invalid input please give correct input.");
             // }
             
-            // DigitUtils dobj = new DigitUtils(iValue1);
             // BitwiseUtils bobj1 = new BitwiseUtils(iValue1);
             // RecursionUtils robj = new RecursionUtils(iValue1);
 
@@ -132,7 +132,7 @@ class Main
             // System.out.println("Everything is OK till now...!");
         // }
 
-        NumberUtils nobj = new NumberUtils(iValue1);
+        // NumberUtils nobj = new NumberUtils(iValue1);
 
         /* For Testing */
 
@@ -189,6 +189,19 @@ class Main
         // {
         //     System.out.printf("%d is not perfect\n",iValue1);
         // }
+
+        DigitUtils dobj = new DigitUtils(iValue1);
+
+        // dobj.displayDigits();
+
+        // iResult = dobj.countDigits();
+        // System.out.printf("Total no. of digits in %d is : %d\n",iValue1,iResult);
+
+        // iResult = dobj.countEvenDigits();
+        // System.out.printf("Total no. of even digits in %d is : %d\n",iValue1,iResult);
+
+        // iResult = dobj.countOddDigits();
+        // System.out.printf("Total no. of odd digits in %d is : %d\n",iValue1,iResult);
 
         sobj.close();
     }
