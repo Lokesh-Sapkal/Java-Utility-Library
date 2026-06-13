@@ -190,7 +190,9 @@ class Main
         //     System.out.printf("%d is not perfect\n",iValue1);
         // }
 
-        DigitUtils dobj = new DigitUtils(iValue1);
+        /////////////////////////////////////////////////////////////////////////////////
+
+        // DigitUtils dobj = new DigitUtils(iValue1);
 
         // dobj.displayDigits();
 
@@ -202,6 +204,15 @@ class Main
 
         // iResult = dobj.countOddDigits();
         // System.out.printf("Total no. of odd digits in %d is : %d\n",iValue1,iResult);
+
+        // iResult = dobj.addDigits();
+        // System.out.printf("Addition of digits of %d is : %d\n",iValue1,iResult);
+
+        // iResult = dobj.multiplyDigits();
+        // System.out.printf("Multiplication of digits of %d is : %d\n",iValue1,iResult);
+
+        // iResult = dobj.reverseNumber();
+        // System.out.printf("Reverse of %d is : %d\n",iValue1,iResult);
 
         sobj.close();
     }

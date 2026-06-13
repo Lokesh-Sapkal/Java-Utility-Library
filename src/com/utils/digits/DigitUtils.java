@@ -21,10 +21,6 @@ public class DigitUtils
     ///////////////////////////////////////////////////////////////////////////////////////////
     public DigitUtils(int no)
     {
-        if(no < -9)
-        {
-            no = -no;
-        }
         this.iNo = no;
     }
 
@@ -39,6 +35,11 @@ public class DigitUtils
     public void displayDigits()
     {
         int iNum = this.iNo;
+
+        if(iNum < -9)
+        {
+            iNum = -iNum;
+        }
 
         System.out.print("Digits are : ");
         while(iNum != 0)
@@ -119,5 +120,85 @@ public class DigitUtils
         }
         
         return iCntodd;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	addDigits
+    //	Description             :   Calculate summation of digits of number.
+    //	Parameters				:   NONE
+    //	Returns					:   integer
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public int addDigits()
+    {
+        int iNum = this.iNo;
+        int iSum = 0;
+
+        if(iNum < 0)
+        {
+            iNum = -iNum;
+        }
+
+        while(iNum != 0)
+        {
+            iSum += iNum % 10;
+            iNum /= 10;
+        }
+        
+        return iSum;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	multiplyDigits
+    //	Description             :   Calculate multiplication of digits of number.
+    //	Parameters				:   NONE
+    //	Returns					:   integer
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public int multiplyDigits()
+    {
+        int iNum = this.iNo;
+        int iMult = 1;
+
+        if(iNum < 0)
+        {
+            iNum = -iNum;
+        }
+
+        while(iNum != 0)
+        {
+            if((iNum % 10) != 0)
+            {
+                iMult *= iNum % 10;
+            }
+            iNum /= 10;
+        }
+        
+        return iMult;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //	Method Name			    :	reverseNumber
+    //	Description             :   Perform operation to reverse the number.
+    //	Parameters				:   NONE
+    //	Returns					:   integer
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public int reverseNumber()
+    {
+        int iNum = this.iNo;
+        int iRev = 0;
+
+        while(iNum != 0)
+        {
+            iRev *= 10;
+            iRev += iNum % 10;
+            iNum /= 10;
+        }
+        
+        return iRev;
     }
 }
