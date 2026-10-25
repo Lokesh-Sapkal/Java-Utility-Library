@@ -3,7 +3,7 @@ package com.utils.app;
 import com.utils.numbers.NumberUtils;
 import com.utils.n_numbers.*;
 import com.utils.digits.DigitUtils;
-import com.utils.patterns.PatternUtils;
+import com.utils.patterns.*;
 import com.utils.strings.StringUtils;
 import com.utils.bitwise.BitwiseUtils;
 import com.utils.matrix.*;
@@ -41,11 +41,12 @@ class Main
         // int Crr[][];
         // Float Drr[][];
         // String str = "";
+        char cValue = '\0';
 
         /* For Output */
         // boolean bResult = false;
         // long lOutput = 0;
-        int iResult = 0;
+        // int iResult = 0;
 
         Scanner sobj = new Scanner(System.in);
 
@@ -58,6 +59,9 @@ class Main
             // System.out.print("Enter second value : ");
             // System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
             // iValue2 = sobj.nextInt();
+
+            System.out.print("Enter the character : ");
+            cValue = sobj.next().charAt(0);
         }
         catch(InputMismatchException eobj)
         {
@@ -131,6 +135,8 @@ class Main
 
             // System.out.println("Everything is OK till now...!");
         // }
+        
+        /////////////////////////////////////////////////////////////////////////////////
 
         // NumberUtils nobj = new NumberUtils(iValue1);
 
@@ -213,6 +219,18 @@ class Main
 
         // iResult = dobj.reverseNumber();
         // System.out.printf("Reverse of %d is : %d\n",iValue1,iResult);
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+        LinearPatternUtils lpobj = new LinearPatternUtils(iValue1);
+
+        lpobj.Display1();
+        lpobj.Display2();
+        lpobj.Display3();
+        lpobj.Display4();
+        lpobj.Display5(cValue);
+
+        /////////////////////////////////////////////////////////////////////////////////
 
         sobj.close();
     }
