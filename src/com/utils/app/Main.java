@@ -33,7 +33,7 @@ class Main
     {
         /* For accept input from user */
         int iValue1 = 0;
-        // int iValue2 = 0;
+        int iValue2 = 0;
         // int i = 0;
         // int j = 0;
         // int Arr[];
@@ -56,12 +56,12 @@ class Main
             System.out.print("Enter the number : ");
             iValue1 = sobj.nextInt();
 
-            // System.out.print("Enter second value : ");
+            System.out.print("Enter second value : ");
             // System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
-            // iValue2 = sobj.nextInt();
+            iValue2 = sobj.nextInt();
 
-            System.out.print("Enter the character : ");
-            cValue = sobj.next().charAt(0);
+            // System.out.print("Enter the character : ");
+            // cValue = sobj.next().charAt(0);
         }
         catch(InputMismatchException eobj)
         {
@@ -70,13 +70,14 @@ class Main
             return;
         }
 
-        // if((iValue1 < 0) || (iValue2 < 0))
-        // {   
-        //     System.out.println("Invalid input please give correct input.");
-        //     return;
-        // }
-        // else
-        // {
+        // if(iValue1 < 0)
+        if((iValue1 < 0) || (iValue2 < 0))
+        {   
+            System.out.println("Invalid input please give correct input.");
+            return;
+        }
+        else
+        {
             // Brr = new Float[iValue1];
             // try
             // {
@@ -111,7 +112,34 @@ class Main
             // BitwiseUtils bobj1 = new BitwiseUtils(iValue1);
             // RecursionUtils robj = new RecursionUtils(iValue1);
 
-            // PatternUtils pobj = new PatternUtils(iValue1, iValue2);
+            /////////////////////////////////////////////////////////////////////////////////
+
+            // LinearPatternUtils lpobj = new LinearPatternUtils(iValue1);
+
+            // lpobj.Display1();
+            // lpobj.Display2();
+            // lpobj.Display3();
+            // lpobj.Display4();
+            // lpobj.Display5(cValue);
+
+            /////////////////////////////////////////////////////////////////////////////////
+
+            NonLinearPatternUtils nlpobj = new NonLinearPatternUtils(iValue1,iValue2);
+
+            nlpobj.squareFillPattern();
+            nlpobj.Display1();
+            nlpobj.Display2();
+            nlpobj.Display3();
+            nlpobj.Display4();
+            nlpobj.Display5();
+            nlpobj.Display6();
+            nlpobj.Display7();
+            nlpobj.Display8();
+            nlpobj.Display9();
+            nlpobj.squareHollowPattern();
+
+            /////////////////////////////////////////////////////////////////////////////////
+
             // BitwiseUtils bobj2 = new BitwiseUtils(iValue1, iValue2);
             
             // sobj.nextLine();
@@ -133,8 +161,8 @@ class Main
 
             // MatrixGenericUtils mgobj = new MatrixGenericUtils(Drr, iValue1, iValue2);
 
-            // System.out.println("Everything is OK till now...!");
-        // }
+            System.out.println("Everything is OK till now...!");
+        }
         
         /////////////////////////////////////////////////////////////////////////////////
 
@@ -219,18 +247,6 @@ class Main
 
         // iResult = dobj.reverseNumber();
         // System.out.printf("Reverse of %d is : %d\n",iValue1,iResult);
-
-        /////////////////////////////////////////////////////////////////////////////////
-
-        LinearPatternUtils lpobj = new LinearPatternUtils(iValue1);
-
-        lpobj.Display1();
-        lpobj.Display2();
-        lpobj.Display3();
-        lpobj.Display4();
-        lpobj.Display5(cValue);
-
-        /////////////////////////////////////////////////////////////////////////////////
 
         sobj.close();
     }

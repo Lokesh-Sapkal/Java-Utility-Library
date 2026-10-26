@@ -22,10 +22,6 @@ public class LinearPatternUtils
     ///////////////////////////////////////////////////////////////////////////////////////////
     public LinearPatternUtils(int no)
     {
-        if(no < 0)
-        {
-            no = -no;
-        }
         this.iFreq = no;
     }
 
