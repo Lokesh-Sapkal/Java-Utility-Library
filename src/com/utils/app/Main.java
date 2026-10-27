@@ -126,17 +126,31 @@ class Main
 
             NonLinearPatternUtils nlpobj = new NonLinearPatternUtils(iValue1,iValue2);
 
-            nlpobj.squareFillPattern();
-            nlpobj.Display1();
-            nlpobj.Display2();
-            nlpobj.Display3();
-            nlpobj.Display4();
-            nlpobj.Display5();
-            nlpobj.Display6();
-            nlpobj.Display7();
-            nlpobj.Display8();
-            nlpobj.Display9();
-            nlpobj.squareHollowPattern();
+            // nlpobj.squareFillPattern();
+            // nlpobj.Display1();
+            // nlpobj.Display2();
+            // nlpobj.Display3();
+            // nlpobj.Display4();
+            // nlpobj.Display5();
+            // nlpobj.Display6();
+            // nlpobj.Display7();
+            // nlpobj.Display8();
+            // nlpobj.Display9();
+            // nlpobj.squareHollowPattern();
+            nlpobj.Display10();
+            nlpobj.Display11();
+            nlpobj.Display12();
+            nlpobj.rightHalfPyramid();
+            nlpobj.rightHalfPyramidX();
+            nlpobj.Display13();
+            nlpobj.Display14();
+            nlpobj.reverseLeftHalfPyramid();
+            nlpobj.Display15();
+            nlpobj.Display16();
+            nlpobj.Display17();
+            nlpobj.leftHalfPyramid();
+            nlpobj.reverseRightHalfPyramid();
+            nlpobj.reverseRightHalfPyramidX();
 
             /////////////////////////////////////////////////////////////////////////////////
 
@@ -161,7 +175,7 @@ class Main
 
             // MatrixGenericUtils mgobj = new MatrixGenericUtils(Drr, iValue1, iValue2);
 
-            System.out.println("Everything is OK till now...!");
+            // System.out.println("Everything is OK till now...!");
         }
         
         /////////////////////////////////////////////////////////////////////////////////
