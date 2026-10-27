@@ -17,26 +17,37 @@ Java-Utility-Library/
 ├── src/
 │   └── com/
 │       └── utils/
+│           │
 │           ├── app/
 │           │   └── Main.java
+│           │
 │           ├── numbers/
 │           │   └── NumberUtils.java
+│           │
 │           ├── n_numbers/
-│           │   └── NNumberUtils.java
+│           │   ├── NNumberUtils.java
 │           │   └── NNumberGenericUtils.java
+│           │
 │           ├── digits/
 │           │   └── DigitUtils.java
+│           │
 │           ├── patterns/
-│           │   └── PatternUtils.java
+│           │   ├── LinearPatternUtils.java
+│           │   └── NonLinearPatternUtils.java
+│           │
 │           ├── strings/
 │           │   └── StringUtils.java
+│           │
 │           ├── bitwise/
 │           │   └── BitwiseUtils.java
+│           │
 │           ├── matrix/
-│           │   └── MatrixUtils.java
+│           │   ├── MatrixUtils.java
 │           │   └── MatrixGenericUtils.java
+│           │
 │           ├── recursion/
 │           │   └── RecursionUtils.java
+│           │
 │           └── io/
 │               └── FileUtils.java
 │
@@ -51,7 +62,7 @@ Java-Utility-Library/
 - *Numbers & Digit Utilities:* Check even/odd, factorial, sum of digits, prime numbers  
 - *Array / Series Operations:* Sum, max, min, reverse, search, count even/odd  
 - *String Manipulations:* Reverse string, palindrome check, count vowels  
-- *Patterns Printing:* Triangle, Diamond, etc.  
+- *Patterns Printing:* Display linear and non-linear patterns
 - *Bitwise Operations:* Count set bits, toggle bits
 - *Matrix Operations:* Addition, multiplication, transpose  
 - *Recursion Methods:* Factorial, Fibonacci, sum of digits
