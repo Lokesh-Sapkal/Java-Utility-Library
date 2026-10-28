@@ -32,33 +32,40 @@ class Main
     public static void main(String A[])
     {
         /* For accept input from user */
-        int iValue1 = 0;
-        int iValue2 = 0;
+        // int iValue1 = 0;
+        int iSize = 0;
+        // int iValue2 = 0;
+        int iElement = 0;
         // int i = 0;
         // int j = 0;
-        // int Arr[];
+        int Arr[];
         // Float Brr[];
         // int Crr[][];
         // Float Drr[][];
         // String str = "";
-        char cValue = '\0';
+        // char cValue = '\0';
 
         /* For Output */
-        // boolean bResult = false;
+        boolean bResult = false;
         // long lOutput = 0;
-        // int iResult = 0;
+        int iResult = 0;
+        float fResult = 0;
 
         Scanner sobj = new Scanner(System.in);
 
         try
         {
             // System.out.print("Enter first value : ");
-            System.out.print("Enter the number : ");
-            iValue1 = sobj.nextInt();
+            // System.out.print("Enter the number : ");
+            System.out.print("Enter the size of array : ");
+            // iValue1 = sobj.nextInt();
+            iSize = sobj.nextInt();
 
-            System.out.print("Enter second value : ");
+            // System.out.print("Enter second value : ");
             // System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
-            iValue2 = sobj.nextInt();
+            System.out.print("Enter the element : ");
+            // iValue2 = sobj.nextInt();
+            iElement = sobj.nextInt();
 
             // System.out.print("Enter the character : ");
             // cValue = sobj.next().charAt(0);
@@ -70,8 +77,9 @@ class Main
             return;
         }
 
+        if(iSize < 1)
         // if(iValue1 < 0)
-        if((iValue1 < 0) || (iValue2 < 0))
+        // if((iValue1 < 0) || (iValue2 < 0))
         {   
             System.out.println("Invalid input please give correct input.");
             return;
@@ -122,9 +130,7 @@ class Main
             // lpobj.Display4();
             // lpobj.Display5(cValue);
 
-            /////////////////////////////////////////////////////////////////////////////////
-
-            NonLinearPatternUtils nlpobj = new NonLinearPatternUtils(iValue1,iValue2);
+            // NonLinearPatternUtils nlpobj = new NonLinearPatternUtils(iValue1,iValue2);
 
             // nlpobj.squareFillPattern();
             // nlpobj.Display1();
@@ -137,20 +143,58 @@ class Main
             // nlpobj.Display8();
             // nlpobj.Display9();
             // nlpobj.squareHollowPattern();
-            nlpobj.Display10();
-            nlpobj.Display11();
-            nlpobj.Display12();
-            nlpobj.rightHalfPyramid();
-            nlpobj.rightHalfPyramidX();
-            nlpobj.Display13();
-            nlpobj.Display14();
-            nlpobj.reverseLeftHalfPyramid();
-            nlpobj.Display15();
-            nlpobj.Display16();
-            nlpobj.Display17();
-            nlpobj.leftHalfPyramid();
-            nlpobj.reverseRightHalfPyramid();
-            nlpobj.reverseRightHalfPyramidX();
+            // nlpobj.Display10();
+            // nlpobj.Display11();
+            // nlpobj.Display12();
+            // nlpobj.rightHalfPyramid();
+            // nlpobj.rightHalfPyramidX();
+            // nlpobj.Display13();
+            // nlpobj.Display14();
+            // nlpobj.reverseLeftHalfPyramid();
+            // nlpobj.Display15();
+            // nlpobj.Display16();
+            // nlpobj.Display17();
+            // nlpobj.leftHalfPyramid();
+            // nlpobj.reverseRightHalfPyramid();
+            // nlpobj.reverseRightHalfPyramidX();
+
+            /////////////////////////////////////////////////////////////////////////////////
+
+            Arr = new int[iSize];
+
+            NNumberUtils nnobj = new NNumberUtils(Arr);
+            bResult = nnobj.Accept(sobj);
+            if(bResult)
+            {
+                nnobj.Display();
+                iResult = nnobj.addElements();
+                System.out.println("Addition of array elements is : "+iResult);
+                iResult = nnobj.multiplyElements();
+                System.out.println("Multiplication of array elements is : "+iResult);
+                iResult = nnobj.countEvenElements();
+                System.out.println("Total number of even elements in the array is : "+iResult);
+                iResult = nnobj.countOddElements();
+                System.out.println("Total number of odd elements in the array is : "+iResult);
+                iResult = nnobj.findMaximum();
+                System.out.println("Maximum element in the array is : "+iResult);
+                iResult = nnobj.findMinimum();
+                System.out.println("Minimum element in the array is : "+iResult);
+                fResult = nnobj.findAverage();
+                System.out.println("Average of the elements of an array is : "+fResult);
+                bResult = nnobj.findElement(iElement);
+                if(bResult)
+                {
+                    System.out.printf("%d is found in the array\n",iElement);
+                }
+                else
+                {
+                    System.out.printf("%d is not found in the array\n",iElement);
+                }
+                iResult = nnobj.countFrequency(iElement);
+                System.out.printf("Total number of %d in the array is : %d\n",iElement,iResult);
+            }
+
+            // NNumberGenericUtils ngobj = new NNumberGenericUtils(Brr);
 
             /////////////////////////////////////////////////////////////////////////////////
 
@@ -163,19 +207,13 @@ class Main
             // StringUtils strobj = new StringUtils(str);
             // FileUtils fobj = new FileUtils(str);
 
-            // Arr = new int[iValue1];
-
-            // NNumberUtils nnobj = new NNumberUtils(Arr);
-
-            // NNumberGenericUtils ngobj = new NNumberGenericUtils(Brr);
-
             // Crr = new int[iValue1][iValue2];
 
             // MatrixUtils mobj = new MatrixUtils(Crr,iValue1,iValue2);
 
             // MatrixGenericUtils mgobj = new MatrixGenericUtils(Drr, iValue1, iValue2);
 
-            // System.out.println("Everything is OK till now...!");
+            // System.out.println("Radhe Radhe : Everything is OK till now...!");
         }
         
         /////////////////////////////////////////////////////////////////////////////////
