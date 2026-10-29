@@ -35,11 +35,12 @@ class Main
         // int iValue1 = 0;
         int iSize = 0;
         // int iValue2 = 0;
-        int iElement = 0;
+        float iElement = 0.0f;
+        float fElement = 0.0f;
         // int i = 0;
         // int j = 0;
-        int Arr[];
-        // Float Brr[];
+        Integer Arr[];
+        Float Brr[];
         // int Crr[][];
         // Float Drr[][];
         // String str = "";
@@ -49,7 +50,8 @@ class Main
         boolean bResult = false;
         // long lOutput = 0;
         int iResult = 0;
-        float fResult = 0;
+        double dResult = 0.0;
+        // float fResult = 0.0f;
 
         Scanner sobj = new Scanner(System.in);
 
@@ -63,9 +65,12 @@ class Main
 
             // System.out.print("Enter second value : ");
             // System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
-            System.out.print("Enter the element : ");
+            System.out.print("Enter the integer element : ");
             // iValue2 = sobj.nextInt();
-            iElement = sobj.nextInt();
+            iElement = sobj.nextFloat();
+
+            System.out.print("Enter the float element : ");
+            fElement = sobj.nextFloat();
 
             // System.out.print("Enter the character : ");
             // cValue = sobj.next().charAt(0);
@@ -85,21 +90,7 @@ class Main
             return;
         }
         else
-        {
-            // Brr = new Float[iValue1];
-            // try
-            // {
-            //     for(i = 0;i < iValue1;i++)
-            //     {
-            //         Brr[i] = sobj.nextFloat();
-            //     }
-            // }
-            // catch(InputMismatchException eobj)
-            // {
-            //     System.out.println("Error : "+eobj);
-            //     System.out.println("Invalid input please give correct input.");
-            // }
-
+        {            
             // Drr = new Float[iValue1][iValue2];
             // try
             // {
@@ -129,6 +120,8 @@ class Main
             // lpobj.Display3();
             // lpobj.Display4();
             // lpobj.Display5(cValue);
+
+            //---------------------------------------------------------------------------------
 
             // NonLinearPatternUtils nlpobj = new NonLinearPatternUtils(iValue1,iValue2);
 
@@ -160,41 +153,129 @@ class Main
 
             /////////////////////////////////////////////////////////////////////////////////
 
-            Arr = new int[iSize];
+            // Arr = new int[iSize];
 
-            NNumberUtils nnobj = new NNumberUtils(Arr);
-            bResult = nnobj.Accept(sobj);
-            if(bResult)
+            // NNumberUtils nnobj = new NNumberUtils(Arr);
+            // bResult = nnobj.Accept(sobj);
+            // if(bResult)
+            // {
+            //     nnobj.Display();
+            //     iResult = nnobj.addElements();
+            //     System.out.println("Addition of array elements is : "+iResult);
+            //     iResult = nnobj.multiplyElements();
+            //     System.out.println("Multiplication of array elements is : "+iResult);
+            //     iResult = nnobj.countEvenElements();
+            //     System.out.println("Total number of even elements in the array is : "+iResult);
+            //     iResult = nnobj.countOddElements();
+            //     System.out.println("Total number of odd elements in the array is : "+iResult);
+            //     iResult = nnobj.findMaximum();
+            //     System.out.println("Maximum element in the array is : "+iResult);
+            //     iResult = nnobj.findMinimum();
+            //     System.out.println("Minimum element in the array is : "+iResult);
+            //     fResult = nnobj.findAverage();
+            //     System.out.println("Average of the elements of an array is : "+fResult);
+            //     bResult = nnobj.findElement(iElement);
+            //     if(bResult)
+            //     {
+            //         System.out.printf("%d is found in the array\n",iElement);
+            //     }
+            //     else
+            //     {
+            //         System.out.printf("%d is not found in the array\n",iElement);
+            //     }
+            //     iResult = nnobj.countFrequency(iElement);
+            //     System.out.printf("Total number of %d in the array is : %d\n",iElement,iResult);
+            // }
+
+            //---------------------------------------------------------------------------------
+
+            Arr = new Integer[iSize];
+            System.out.println("Enter integer array elements");
+            try
             {
-                nnobj.Display();
-                iResult = nnobj.addElements();
-                System.out.println("Addition of array elements is : "+iResult);
-                iResult = nnobj.multiplyElements();
-                System.out.println("Multiplication of array elements is : "+iResult);
-                iResult = nnobj.countEvenElements();
-                System.out.println("Total number of even elements in the array is : "+iResult);
-                iResult = nnobj.countOddElements();
-                System.out.println("Total number of odd elements in the array is : "+iResult);
-                iResult = nnobj.findMaximum();
-                System.out.println("Maximum element in the array is : "+iResult);
-                iResult = nnobj.findMinimum();
-                System.out.println("Minimum element in the array is : "+iResult);
-                fResult = nnobj.findAverage();
-                System.out.println("Average of the elements of an array is : "+fResult);
-                bResult = nnobj.findElement(iElement);
-                if(bResult)
+                for(int i = 0;i < iSize;i++)
                 {
-                    System.out.printf("%d is found in the array\n",iElement);
+                    Arr[i] = sobj.nextInt();
                 }
-                else
-                {
-                    System.out.printf("%d is not found in the array\n",iElement);
-                }
-                iResult = nnobj.countFrequency(iElement);
-                System.out.printf("Total number of %d in the array is : %d\n",iElement,iResult);
+            }
+            catch(InputMismatchException eobj)
+            {
+                System.out.println("Error : "+eobj);
+                System.out.println("Invalid input please give correct input.");
+                return;
             }
 
-            // NNumberGenericUtils ngobj = new NNumberGenericUtils(Brr);
+            NNumberGenericUtils<Integer> ngobj1 = new NNumberGenericUtils<>(Arr);
+
+            ngobj1.Display();
+            dResult = ngobj1.addElementsGeneric();
+            System.out.println("Addition of integer array elements is : "+dResult);
+            dResult = ngobj1.multiplyElementsGeneric();
+            System.out.println("Multiplication of integer array elements is : "+dResult);
+            iResult = ngobj1.countEvenElementsGeneric();
+            System.out.println("Total number of even elements in the integer array is : "+iResult);
+            iResult = ngobj1.countOddElementsGeneric();
+            System.out.println("Total number of odd elements in the integer array is : "+iResult);
+            dResult = ngobj1.findMaximumGeneric();
+            System.out.println("Maximum element in the integer array is : "+dResult);
+            dResult = ngobj1.findMinimumGeneric();
+            System.out.println("Minimum element in the integer array is : "+dResult);
+            dResult = ngobj1.findAverageGeneric();
+            System.out.println("Average of the elements of a integer array is : "+dResult);
+            bResult = ngobj1.findElementGeneric(iElement);
+            if(bResult)
+            {
+                System.out.println(iElement+" is found in the integer array");
+            }
+            else
+            {
+                System.out.println(iElement+" is not found in the integer array");
+            }
+            iResult = ngobj1.countFrequencyGeneric(iElement);
+            System.out.println("Total number of "+iElement+" in the integer array is : "+iResult);
+
+            //---------------------------------------------------------------------------------
+
+            Brr = new Float[iSize];
+            System.out.println("Enter float array elements");
+            try
+            {
+                for(int i = 0;i < iSize;i++)
+                {
+                    Brr[i] = sobj.nextFloat();
+                }
+            }
+            catch(InputMismatchException eobj)
+            {
+                System.out.println("Error : "+eobj);
+                System.out.println("Invalid input please give correct input.");
+                return;
+            }
+
+            NNumberGenericUtils<Float> ngobj2 = new NNumberGenericUtils<>(Brr);
+
+            ngobj2.Display();
+            dResult = ngobj2.addElementsGeneric();
+            System.out.println("Addition of float array elements is : "+dResult);
+            dResult = ngobj2.multiplyElementsGeneric();
+            System.out.println("Multiplication of float array elements is : "+dResult);
+            dResult = ngobj2.findMaximumGeneric();
+            System.out.println("Maximum element in the float array is : "+dResult);
+            dResult = ngobj2.findMinimumGeneric();
+            System.out.println("Minimum element in the float array is : "+dResult);
+            dResult = ngobj2.findAverageGeneric();
+            System.out.println("Average of the elements of a float array is : "+dResult);
+            bResult = ngobj2.findElementGeneric(fElement);
+            if(bResult)
+            {
+                System.out.println(fElement+" is found in the float array");
+            }
+            else
+            {
+                System.out.println(fElement+" is not found in the float array");
+            }
+            iResult = ngobj2.countFrequencyGeneric(fElement);
+            System.out.println("Total number of "+fElement+" in the float array is : "+iResult);
 
             /////////////////////////////////////////////////////////////////////////////////
 
@@ -303,3 +384,4 @@ class Main
         sobj.close();
     }
 }
+
