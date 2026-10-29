@@ -151,10 +151,7 @@ public class NNumberUtils extends ArrayX
 
         for(i = 0, iMult = 1;i < super.Arr.length;i++)
         {
-            if(super.Arr[i] != 0)
-            {
-                iMult *= super.Arr[i];
-            }
+            iMult *= super.Arr[i];
         }
 
         return iMult;
@@ -262,14 +259,7 @@ public class NNumberUtils extends ArrayX
     ///////////////////////////////////////////////////////////////////////////////////////////
     public float findAverage()
     {
-        int i = 0, iSum = 0;
-
-        for(i = 0;i < super.Arr.length;i++)
-        {
-            iSum += super.Arr[i];
-        }
-
-        return (float)iSum/(float)super.Arr.length;
+        return (float)addElements()/(float)super.Arr.length;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////
