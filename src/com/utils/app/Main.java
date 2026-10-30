@@ -33,27 +33,28 @@ class Main
     {
         /* For accept input from user */
         // int iValue1 = 0;
-        int iSize = 0;
+        // int iSize = 0;
         // int iValue2 = 0;
-        int iElement = 0;
+        // int iElement = 0;
         // float iElement = 0.0f;
         // float fElement = 0.0f;
         // int i = 0;
         // int j = 0;
-        int Arr[];
+        // int Arr[];
         // Integer Arr[];
         // Float Brr[];
         // int Crr[][];
         // Float Drr[][];
-        // String str = "";
-        // char cValue = '\0';
+        String sValue = "";
+        char cValue = '\0';
 
         /* For Output */
         boolean bResult = false;
         // long lOutput = 0;
         int iResult = 0;
         // double dResult = 0.0;
-        float fResult = 0.0f;
+        // float fResult = 0.0f;
+        String sResult = "";
 
         Scanner sobj = new Scanner(System.in);
 
@@ -61,23 +62,27 @@ class Main
         {
             // System.out.print("Enter first value : ");
             // System.out.print("Enter the number : ");
-            System.out.print("Enter the size of array : ");
+            // System.out.print("Enter the size of array : ");
             // iValue1 = sobj.nextInt();
-            iSize = sobj.nextInt();
+            // iSize = sobj.nextInt();
 
             // System.out.print("Enter second value : ");
             // System.out.printf("Enter the number to check whether it is divisible by %d : ",iValue1);
-            System.out.print("Enter the element : ");
+            // System.out.print("Enter the element : ");
             // System.out.print("Enter the integer element : ");
             // iValue2 = sobj.nextInt();
-            iElement = sobj.nextInt();
+            // iElement = sobj.nextInt();
             // iElement = sobj.nextFloat();
 
             // System.out.print("Enter the float element : ");
             // fElement = sobj.nextFloat();
 
-            // System.out.print("Enter the character : ");
-            // cValue = sobj.next().charAt(0);
+            // sobj.nextLine();
+            System.out.print("Enter the string : ");
+            sValue = sobj.nextLine();
+
+            System.out.print("Enter the character : ");
+            cValue = sobj.next().charAt(0);
         }
         catch(InputMismatchException eobj)
         {
@@ -86,15 +91,15 @@ class Main
             return;
         }
 
-        if(iSize < 1)
+        // if(iSize < 1)
         // if(iValue1 < 0)
         // if((iValue1 < 0) || (iValue2 < 0))
-        {   
-            System.out.println("Invalid input please give correct input.");
-            return;
-        }
-        else
-        {            
+        // {   
+        //     System.out.println("Invalid input please give correct input.");
+        //     return;
+        // }
+        // else
+        // {            
             // Drr = new Float[iValue1][iValue2];
             // try
             // {
@@ -157,39 +162,39 @@ class Main
 
             /////////////////////////////////////////////////////////////////////////////////
 
-            Arr = new int[iSize];
+            // Arr = new int[iSize];
 
-            NNumberUtils nnobj = new NNumberUtils(Arr);
-            bResult = nnobj.Accept(sobj);
-            if(bResult)
-            {
-                nnobj.Display();
-                iResult = nnobj.addElements();
-                System.out.println("Addition of array elements is : "+iResult);
-                iResult = nnobj.multiplyElements();
-                System.out.println("Multiplication of array elements is : "+iResult);
-                iResult = nnobj.countEvenElements();
-                System.out.println("Total number of even elements in the array is : "+iResult);
-                iResult = nnobj.countOddElements();
-                System.out.println("Total number of odd elements in the array is : "+iResult);
-                iResult = nnobj.findMaximum();
-                System.out.println("Maximum element in the array is : "+iResult);
-                iResult = nnobj.findMinimum();
-                System.out.println("Minimum element in the array is : "+iResult);
-                fResult = nnobj.findAverage();
-                System.out.println("Average of the elements of an array is : "+fResult);
-                bResult = nnobj.findElement(iElement);
-                if(bResult)
-                {
-                    System.out.printf("%d is found in the array\n",iElement);
-                }
-                else
-                {
-                    System.out.printf("%d is not found in the array\n",iElement);
-                }
-                iResult = nnobj.countFrequency(iElement);
-                System.out.printf("Total number of %d in the array is : %d\n",iElement,iResult);
-            }
+            // NNumberUtils nnobj = new NNumberUtils(Arr);
+            // bResult = nnobj.Accept(sobj);
+            // if(bResult)
+            // {
+            //     nnobj.Display();
+            //     iResult = nnobj.addElements();
+            //     System.out.println("Addition of array elements is : "+iResult);
+            //     iResult = nnobj.multiplyElements();
+            //     System.out.println("Multiplication of array elements is : "+iResult);
+            //     iResult = nnobj.countEvenElements();
+            //     System.out.println("Total number of even elements in the array is : "+iResult);
+            //     iResult = nnobj.countOddElements();
+            //     System.out.println("Total number of odd elements in the array is : "+iResult);
+            //     iResult = nnobj.findMaximum();
+            //     System.out.println("Maximum element in the array is : "+iResult);
+            //     iResult = nnobj.findMinimum();
+            //     System.out.println("Minimum element in the array is : "+iResult);
+            //     fResult = nnobj.findAverage();
+            //     System.out.println("Average of the elements of an array is : "+fResult);
+            //     bResult = nnobj.findElement(iElement);
+            //     if(bResult)
+            //     {
+            //         System.out.printf("%d is found in the array\n",iElement);
+            //     }
+            //     else
+            //     {
+            //         System.out.printf("%d is not found in the array\n",iElement);
+            //     }
+            //     iResult = nnobj.countFrequency(iElement);
+            //     System.out.printf("Total number of %d in the array is : %d\n",iElement,iResult);
+            // }
 
             //---------------------------------------------------------------------------------
 
@@ -284,12 +289,7 @@ class Main
             /////////////////////////////////////////////////////////////////////////////////
 
             // BitwiseUtils bobj2 = new BitwiseUtils(iValue1, iValue2);
-            
-            // sobj.nextLine();
-            // System.out.println("Enter the string : ");
-            // str = sobj.nextLine();
 
-            // StringUtils strobj = new StringUtils(str);
             // FileUtils fobj = new FileUtils(str);
 
             // Crr = new int[iValue1][iValue2];
@@ -299,7 +299,7 @@ class Main
             // MatrixGenericUtils mgobj = new MatrixGenericUtils(Drr, iValue1, iValue2);
 
             // System.out.println("Radhe Radhe : Everything is OK till now...!");
-        }
+        // }
         
         /////////////////////////////////////////////////////////////////////////////////
 
@@ -384,6 +384,65 @@ class Main
 
         // iResult = dobj.reverseNumber();
         // System.out.printf("Reverse of %d is : %d\n",iValue1,iResult);
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+        StringUtils strobj = new StringUtils(sValue);
+
+        iResult = strobj.countCapitalChar();
+        System.out.println("Total number of capital character in the string is : "+iResult);
+        iResult = strobj.countSmallChar();
+        System.out.println("Total number of small character in the string is : "+iResult);
+        iResult = strobj.countDigit();
+        System.out.println("Total number of digits in the string is : "+iResult);
+        bResult = strobj.findOccurrence(cValue);
+        if(bResult)
+        {
+            System.out.printf("Character %c is found in string\n",cValue);
+        }
+        else
+        {
+            System.out.printf("Character %c is not found in string\n",cValue);
+        }
+        bResult = strobj.findOccurrenceIgnoreCase(cValue);
+        if(bResult)
+        {
+            System.out.printf("Character %c is found in string.(case insensitive)\n",cValue);
+        }
+        else
+        {
+            System.out.printf("Character %c is not found in string.(case insensitive)\n",cValue);
+        }
+        iResult = strobj.countFrequency(cValue);
+        System.out.printf("Total number of character %c in the string is : %d\n",cValue,iResult);
+        iResult = strobj.countFrequencyIgnoreCase(cValue);
+        System.out.printf("Total number of character %c in the string is : %d.(case insensitive)\n",cValue,iResult);
+        sResult = strobj.strLower();
+        System.out.println("String after converting to lowercase is : "+sResult);
+        sResult = strobj.strUpper();
+        System.out.println("String after converting to uppercase is : "+sResult);
+        sResult = strobj.strToggle();
+        System.out.println("String after performing toggle opration is : "+sResult);
+        sResult = strobj.strReverse();
+        System.out.println("String after reverse it is : "+sResult);
+        bResult = strobj.checkPalindrome();
+        if(bResult)
+        {
+            System.out.println("String is a palindrome");
+        }
+        else
+        {
+            System.out.println("String is not a palindrome");
+        }
+        bResult = strobj.checkPalindromeIgnoreCase();
+        if(bResult)
+        {
+            System.out.println("String is a palindrome.(case insensitive)");
+        }
+        else
+        {
+            System.out.println("String is not a palindrome.(case insensitive)");
+        }
 
         sobj.close();
     }
