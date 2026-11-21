@@ -11,6 +11,7 @@ import com.utils.recursion.RecursionUtils;
 import com.utils.io.FileUtils;
 
 import java.util.*;
+import java.io.IOException;
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -46,15 +47,15 @@ class Main
         // int Crr[][];
         // Float Drr[][];
         String sValue = "";
-        char cValue = '\0';
+        // char cValue = '\0';
 
         /* For Output */
         boolean bResult = false;
         // long lOutput = 0;
-        int iResult = 0;
+        // int iResult = 0;
         // double dResult = 0.0;
         // float fResult = 0.0f;
-        String sResult = "";
+        // String sResult = "";
 
         Scanner sobj = new Scanner(System.in);
 
@@ -78,11 +79,12 @@ class Main
             // fElement = sobj.nextFloat();
 
             // sobj.nextLine();
-            System.out.print("Enter the string : ");
+            // System.out.print("Enter the string : ");
+            System.out.print("Enter the file name (without extension): ");
             sValue = sobj.nextLine();
 
-            System.out.print("Enter the character : ");
-            cValue = sobj.next().charAt(0);
+            // System.out.print("Enter the character : ");
+            // cValue = sobj.next().charAt(0);
         }
         catch(InputMismatchException eobj)
         {
@@ -290,8 +292,6 @@ class Main
 
             // BitwiseUtils bobj2 = new BitwiseUtils(iValue1, iValue2);
 
-            // FileUtils fobj = new FileUtils(str);
-
             // Crr = new int[iValue1][iValue2];
 
             // MatrixUtils mobj = new MatrixUtils(Crr,iValue1,iValue2);
@@ -387,61 +387,92 @@ class Main
 
         /////////////////////////////////////////////////////////////////////////////////
 
-        StringUtils strobj = new StringUtils(sValue);
+        // StringUtils strobj = new StringUtils(sValue);
 
-        iResult = strobj.countCapitalChar();
-        System.out.println("Total number of capital character in the string is : "+iResult);
-        iResult = strobj.countSmallChar();
-        System.out.println("Total number of small character in the string is : "+iResult);
-        iResult = strobj.countDigit();
-        System.out.println("Total number of digits in the string is : "+iResult);
-        bResult = strobj.findOccurrence(cValue);
+        // iResult = strobj.countCapitalChar();
+        // System.out.println("Total number of capital character in the string is : "+iResult);
+        // iResult = strobj.countSmallChar();
+        // System.out.println("Total number of small character in the string is : "+iResult);
+        // iResult = strobj.countDigit();
+        // System.out.println("Total number of digits in the string is : "+iResult);
+        // bResult = strobj.findOccurrence(cValue);
+        // if(bResult)
+        // {
+        //     System.out.printf("Character %c is found in string\n",cValue);
+        // }
+        // else
+        // {
+        //     System.out.printf("Character %c is not found in string\n",cValue);
+        // }
+        // bResult = strobj.findOccurrenceIgnoreCase(cValue);
+        // if(bResult)
+        // {
+        //     System.out.printf("Character %c is found in string.(case insensitive)\n",cValue);
+        // }
+        // else
+        // {
+        //     System.out.printf("Character %c is not found in string.(case insensitive)\n",cValue);
+        // }
+        // iResult = strobj.countFrequency(cValue);
+        // System.out.printf("Total number of character %c in the string is : %d\n",cValue,iResult);
+        // iResult = strobj.countFrequencyIgnoreCase(cValue);
+        // System.out.printf("Total number of character %c in the string is : %d.(case insensitive)\n",cValue,iResult);
+        // sResult = strobj.strLower();
+        // System.out.println("String after converting to lowercase is : "+sResult);
+        // sResult = strobj.strUpper();
+        // System.out.println("String after converting to uppercase is : "+sResult);
+        // sResult = strobj.strToggle();
+        // System.out.println("String after performing toggle opration is : "+sResult);
+        // sResult = strobj.strReverse();
+        // System.out.println("String after reverse it is : "+sResult);
+        // bResult = strobj.checkPalindrome();
+        // if(bResult)
+        // {
+        //     System.out.println("String is a palindrome");
+        // }
+        // else
+        // {
+        //     System.out.println("String is not a palindrome");
+        // }
+        // bResult = strobj.checkPalindromeIgnoreCase();
+        // if(bResult)
+        // {
+        //     System.out.println("String is a palindrome.(case insensitive)");
+        // }
+        // else
+        // {
+        //     System.out.println("String is not a palindrome.(case insensitive)");
+        // }
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+        FileUtils fobj = new FileUtils(sValue);
+
+        bResult = fobj.createFile();
         if(bResult)
         {
-            System.out.printf("Character %c is found in string\n",cValue);
+            System.out.println(sValue+" file created successfully.");
         }
         else
         {
-            System.out.printf("Character %c is not found in string\n",cValue);
+            System.out.println(sValue+" file already exist or creation fails.");
         }
-        bResult = strobj.findOccurrenceIgnoreCase(cValue);
+
+        System.out.println(fobj.getFileInfo());
+
+        fobj.writeToFile(sobj);
+        fobj.appendToFile(sobj);
+
+        fobj.readFile();
+
+        bResult = fobj.deleteFile(sobj);
         if(bResult)
         {
-            System.out.printf("Character %c is found in string.(case insensitive)\n",cValue);
+            System.out.println(sValue+" file deleted successfully.");
         }
         else
         {
-            System.out.printf("Character %c is not found in string.(case insensitive)\n",cValue);
-        }
-        iResult = strobj.countFrequency(cValue);
-        System.out.printf("Total number of character %c in the string is : %d\n",cValue,iResult);
-        iResult = strobj.countFrequencyIgnoreCase(cValue);
-        System.out.printf("Total number of character %c in the string is : %d.(case insensitive)\n",cValue,iResult);
-        sResult = strobj.strLower();
-        System.out.println("String after converting to lowercase is : "+sResult);
-        sResult = strobj.strUpper();
-        System.out.println("String after converting to uppercase is : "+sResult);
-        sResult = strobj.strToggle();
-        System.out.println("String after performing toggle opration is : "+sResult);
-        sResult = strobj.strReverse();
-        System.out.println("String after reverse it is : "+sResult);
-        bResult = strobj.checkPalindrome();
-        if(bResult)
-        {
-            System.out.println("String is a palindrome");
-        }
-        else
-        {
-            System.out.println("String is not a palindrome");
-        }
-        bResult = strobj.checkPalindromeIgnoreCase();
-        if(bResult)
-        {
-            System.out.println("String is a palindrome.(case insensitive)");
-        }
-        else
-        {
-            System.out.println("String is not a palindrome.(case insensitive)");
+            System.out.println(sValue+" file not deleted or does not exist.");
         }
 
         sobj.close();
